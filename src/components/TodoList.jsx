@@ -32,7 +32,7 @@ const TodoLi = styled.li`
 background-color: aliceblue;
 margin: 10px auto;
 padding: 15px;
-width: 500px;
+width: 600px;
 border-radius: 10px;
 display: flex;
 justify-content: space-between;

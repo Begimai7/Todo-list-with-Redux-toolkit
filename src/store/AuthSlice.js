@@ -13,7 +13,7 @@ export const AuthSlice = createSlice({
    state.email = action.payload;
    state.isAuthorized = true
  },
- logOut(state){
+ logOut(state, action){
   state.email = "";
   state.isAuthorized = false
  }

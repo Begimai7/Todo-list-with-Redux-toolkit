@@ -30,7 +30,7 @@ const submitTodo = (e) => {
 }
 const Form = styled.form`
  margin: 20px auto;
- width: 600px;
+ width: 630px;
  margin-bottom: 40px;
 `
 const Input = styled.input`
@@ -46,6 +46,7 @@ const Button = styled.button`
  border: none;
  background-color: #e0ec6e;
  font-weight: 550;
+ margin: 10px;
 
  :hover{
   background-color: #e8f537;

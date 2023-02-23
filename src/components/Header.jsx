@@ -1,19 +1,16 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { authAction } from '../store/AuthSlice'
 
-
-export const Header = () => {
-const {isAuthorized} = useSelector((state) => state.auth)
-console.log(isAuthorized);
- const dispatch = useDispatch()
+export const Header = ({logOut, searchParams}) => {
+// const {isAuthorized} = useSelector((state) => state.auth)
+// console.log(isAuthorized);
+//  const dispatch = useDispatch()
 
   return (
    <HeaderContainer>
      <p>TodoList</p>
       {
-     isAuthorized && <Button onClick={() => dispatch(authAction.logOut())}>Logout</Button>
+     searchParams.has("todos") && <Button onClick={logOut}>Logout</Button>
       }   
    </HeaderContainer>
     

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import { authAction } from '../store/AuthSlice'
 
-export const Login = () => {
+export const Login = ({openTodoPage}) => {
 
   const [login, setLogin] = useState({
     email: "",
@@ -20,7 +20,7 @@ export const Login = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     if(login.password.trim().length > 4){
-      dispatch(authAction.authLogin(login.email))
+     dispatch(authAction.authLogin(login.email))
     }
   }
  
@@ -32,6 +32,7 @@ export const Login = () => {
        placeholder='email'
        value={login.email}
        onChange={inputChangeHandler("email")}
+       required
        
         />
      <Input 
@@ -39,9 +40,10 @@ export const Login = () => {
        placeholder='password'
        value={login.password}
        onChange={inputChangeHandler("password")}
+       required
    
        />
-       <Button onClick={inputChangeHandler}>Login</Button>
+       <Button onClick={openTodoPage}>Login</Button>
     </LoginContainer>
   )
 }

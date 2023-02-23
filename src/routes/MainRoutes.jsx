@@ -1,11 +1,12 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { MainLayout } from '../layout/MainLayout'
+import { TodoForm } from '../components/TodoForm'
+import { TodoList } from '../components/TodoList'
 
 export const MainRoutes = () => {
   return (
-    <Routes>
-      <Route path='/' element={ <MainLayout />} />
-    </Routes>
+    <>
+     <TodoForm />
+      <TodoList />
+    </>
   )
 }
